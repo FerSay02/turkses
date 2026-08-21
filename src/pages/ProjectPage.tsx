@@ -15,14 +15,14 @@ export function ProjectPage({ copy }: PageProps) {
     <section className="content-section section-split" id={about.id}>
       <AnimatedPageHeader eyebrow={about.kicker} title={about.title} description={about.lead} />
 
-      <div className="section-split-grid">
-        <OrbitBorderCard className="section-panel" phase={0}>
-          <h2 className="section-panel-title">
+      <div className="section-split-grid project-intro-grid">
+        <OrbitBorderCard className="section-panel project-intro-panel project-needs-panel" phase={0}>
+          <h2 className="section-panel-title project-panel-title">
             <ScrollTextReveal>{about.needsTitle}</ScrollTextReveal>
           </h2>
-          <div className="section-list">
+          <div className="section-list project-needs-list">
             {about.needs.map((item, index) => (
-              <div className="section-list-item" key={item}>
+              <div className="section-list-item project-need-item" key={item}>
                 <span className="section-list-marker" aria-hidden="true" />
                 <p>
                   <ScrollTextReveal delay={index * 70}>{item}</ScrollTextReveal>
@@ -32,20 +32,29 @@ export function ProjectPage({ copy }: PageProps) {
           </div>
         </OrbitBorderCard>
 
-        <OrbitBorderCard className="section-panel" phase={120}>
-          <h2 className="section-panel-title">
+        <OrbitBorderCard className="section-panel project-intro-panel project-objectives-panel" phase={120}>
+          <h2 className="section-panel-title project-panel-title">
             <ScrollTextReveal>{about.objectivesTitle}</ScrollTextReveal>
           </h2>
-          <div className="objective-grid">
+          <div className="objective-grid project-objective-grid">
             {about.objectives.map((item, index) => (
-              <div className="objective-card" key={item.title}>
+              <OrbitBorderCard
+                as="div"
+                className={`objective-card project-objective-card orbit-border-card--inner ${
+                  index === about.objectives.length - 1 ? 'project-objective-card-wide' : ''
+                }`}
+                key={item.title}
+                phase={index * 90 + 40}
+                speed={11}
+                hoverFill={72}
+              >
                 <strong>
                   <ScrollTextReveal delay={index * 70}>{item.title}</ScrollTextReveal>
                 </strong>
                 <p>
                   <ScrollTextReveal delay={index * 90 + 40}>{item.body}</ScrollTextReveal>
                 </p>
-              </div>
+              </OrbitBorderCard>
             ))}
           </div>
         </OrbitBorderCard>

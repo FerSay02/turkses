@@ -183,10 +183,10 @@ export function CursorRingField({
         ctx.save();
         ctx.translate(particle.x, particle.y);
         ctx.rotate(angle + noise * 0.5);
-        ctx.globalAlpha = 0.16 + energy * 0.54;
+        ctx.globalAlpha = 0.21 + energy * 0.62;
         ctx.fillStyle = particle.color;
-        const length = particle.size * (2.6 + energy * 5.2);
-        const heightSize = particle.size * (0.9 + energy * 1.1);
+        const length = particle.size * (2.9 + energy * 5.6);
+        const heightSize = particle.size * (1.05 + energy * 1.15);
         const radiusSize = heightSize / 2;
         ctx.beginPath();
         ctx.roundRect(-length / 2, -heightSize / 2, length, heightSize, radiusSize);

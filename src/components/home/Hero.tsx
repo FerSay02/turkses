@@ -14,11 +14,6 @@ export function Hero({ locale, copy }: HeroProps) {
   return (
     <section className="hero" id="top">
       <div className="hero-header">
-        <p className="hero-kicker hero-kicker-centered">
-          <span className="hero-kicker-dot" aria-hidden="true" />
-          <ScrollTextReveal>{copy.heroKicker}</ScrollTextReveal>
-        </p>
-
         <div className="hero-title-stack" aria-label={copy.heroTitleLines.join(' ')}>
           <StrokeText
             className="hero-stroke hero-stroke-line"

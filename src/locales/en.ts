@@ -37,7 +37,7 @@ export const en: TranslationMap = {
     about: {
       id: 'proje',
       kicker: 'About the project',
-      title: 'What is TürkSes and why is it needed now?',
+      title: 'What Is TürkSes?',
       lead:
         'TürkSes is a research initiative that opens Turkish-specific linguistic and acoustic patterns to scientific study while building secure data infrastructure and AI-assisted analysis tools for cognitive health research.',
       needsTitle: 'Why TürkSes?',

@@ -28,8 +28,8 @@ export default function App() {
           <CursorRingField
             background="#ffffff"
             colors={{ items: ['#4285F4', '#174EA6', '#D2E3FC', '#34A853'] }}
-            density={560}
-            dotSize={42}
+            density={660}
+            dotSize={46}
             speed={5}
             cameraDistance={160}
             ring={{ push: 38, width: 9, radius: 12, turbulence: 70 }}
